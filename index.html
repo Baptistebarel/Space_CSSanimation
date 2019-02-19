@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Space pilote simulation</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Codystar|Contrail+One|Fascinate+Inline|Faster+One|Open+Sans|Syncopate" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/planet.png" >
+</head>
+<body>
+  <div class="container">
+    <div class="background">
+      <div class="name">
+        <p>Welcome pilote, please enter your name.</p>
+        <input type="text" value="" class="matricule">
+        <button class="start">Start</button>
+      </div>
+      <div class="stars_road">
+        <img src="images/fusee.png" alt="image d'une fusée">
+      </div>
+      <div class="planet_roadmap">
+        <div class="planet planet1"></div>
+        <div class="planet planet2"></div>
+        <div class="planet planet3"></div>
+        <div class="planet planet4"></div>
+        <div class="planet planet5"></div>
+      </div>
+      <div class="line"></div>
+    </div>
+    <div class="rectangle_flight">
+      <span class="categorie">Flight</span>
+      <div class="bar">
+        <div class="bar2"></div>
+      </div>
+      <span class="hour">1 day left</span>
+      <canvas class="arc1"></canvas>
+      <span class="txt_arc1">26%</span>
+      <span class="reactor1">reactor 1</span>
+      <canvas class="arc2"></canvas>
+      <span class="txt_arc2">68%</span>
+      <span class="reactor2">reactor 2</span>
+      <canvas class="arc3"></canvas>
+      <span class="txt_arc3">95%</span>
+      <span class="reactor3">reactor 3</span>
+      <div class="buttons">
+        <div class="buttonv1 button1"></div>
+        <div class="buttonv2 button2"></div>
+        <div class="buttonv3 button3"></div>
+        <div class="buttonv1 button4"></div>
+        <div class="buttonv1 button5"></div>
+        <div class="buttonv2 button6"></div>
+        <div class="buttonv2 button7"></div>
+        <div class="buttonv3 button8"></div>
+        <div class="buttonv1 button9"></div>
+        <div class="buttonv2 button10"></div>
+        <div class="buttonv3 button11"></div>
+        <div class="buttonv1 button12"></div>
+      </div>
+    </div>
+    <div class="rectangle_weather">
+      <span class="categorie">Weather</span>
+      <div class="climate">
+        <div class="sun">
+          <div class="circle"></div>
+          <div class="sunray sunray1"></div>
+          <div class="sunray sunray2"></div>
+          <div class="sunray sunray3"></div>
+          <div class="sunray sunray4"></div>
+          <div class="sunray sunray5"></div>
+          <div class="sunray sunray6"></div>
+          <div class="sunray sunray7"></div>
+          <div class="sunray sunray8"></div>
+        </div>
+        <div class="clouds">
+          <div class="cloud">
+            <div class="cloud_rectangle"></div>
+            <div class="cloud_circle1"></div>
+            <div class="cloud_circle2"></div>
+            <div class="cloud_circle3"></div>
+            <div class="cloud_circle4"></div>
+          </div>
+          <div class="cloud cloud2">
+            <div class="cloud2_color cloud_rectangle"></div>
+            <div class="cloud2_color cloud_circle1"></div>
+            <div class="cloud2_color cloud_circle2"></div>
+            <div class="cloud2_color cloud_circle3"></div>
+            <div class="cloud2_color cloud_circle4"></div>
+          </div>
+          <div class="smog smog1"></div>
+          <div class="smog smog2"></div>
+        </div>
+        <div class="clouds_rain">
+          <div class="cloud">
+            <div class="cloud_rectangle"></div>
+            <div class="cloud_circle1"></div>
+            <div class="cloud_circle2"></div>
+            <div class="cloud_circle3"></div>
+            <div class="cloud_circle4"></div>
+          </div>
+          <div class="cloud cloud2">
+            <div class="cloud2_color cloud_rectangle"></div>
+            <div class="cloud2_color cloud_circle1"></div>
+            <div class="cloud2_color cloud_circle2"></div>
+            <div class="cloud2_color cloud_circle3"></div>
+            <div class="cloud2_color cloud_circle4"></div>
+          </div>
+          <div class="rain rain1"></div>
+          <div class="rain rain2"></div>
+          <div class="rain rain3"></div>
+          <div class="rain rain4"></div>
+          <div class="rain rain5"></div>
+        </div>
+        <div class="lightning">
+          <div class="cloud">
+            <div class="cloud_rectangle"></div>
+            <div class="cloud_circle1"></div>
+            <div class="cloud_circle2"></div>
+            <div class="cloud_circle3"></div>
+            <div class="cloud_circle4"></div>
+          </div>
+          <div class="cloud cloud2">
+            <div class="cloud2_color cloud_rectangle"></div>
+            <div class="cloud2_color cloud_circle1"></div>
+            <div class="cloud2_color cloud_circle2"></div>
+            <div class="cloud2_color cloud_circle3"></div>
+            <div class="cloud2_color cloud_circle4"></div>
+          </div>
+          <div class="thunder lightning1"></div>
+          <div class="thunder lightning2"></div>
+          <div class="thunder lightning3"></div>
+        </div>
+      </div>
+      <span class="air">CO2</span>
+      <span class="temperature">40°F</span>
+      <div class="setting cursor1">
+        <div class="first_line">
+          <div class="block block1"></div>
+          <div class="block block2"></div>
+          <div class="block block3"></div>
+          <div class="block block4"></div>
+          <div class="block block5"></div>
+          <div class="block block6"></div>
+          <div class="block block7"></div>
+        </div>
+        <div class="second_line">
+          <div class="block block1"></div>
+          <div class="block block2"></div>
+          <div class="block block3"></div>
+          <div class="block block4"></div>
+          <div class="block block5"></div>
+          <div class="block block6"></div>
+          <div class="block block7"></div>
+          <div class="block block8"></div>
+          <div class="block block9"></div>
+          <div class="block block10"></div>
+          <div class="block block11"></div>
+          <div class="block block12"></div>
+          <div class="block block13"></div>
+          <div class="block block14"></div>
+          <div class="block block15"></div>
+        </div>
+        <div class="third_line">
+          <div class="cursor">
+            <div class="triangle"></div>
+            <div class="square"></div>
+          </div>
+        </div>
+      </div>
+      <div class="setting cursor2">
+        <div class="first_line">
+          <div class="block block1"></div>
+          <div class="block block2"></div>
+          <div class="block block3"></div>
+          <div class="block block4"></div>
+          <div class="block block5"></div>
+          <div class="block block6"></div>
+          <div class="block block7"></div>
+        </div>
+        <div class="second_line">
+          <div class="block block1"></div>
+          <div class="block block2"></div>
+          <div class="block block3"></div>
+          <div class="block block4"></div>
+          <div class="block block5"></div>
+          <div class="block block6"></div>
+          <div class="block block7"></div>
+          <div class="block block8"></div>
+          <div class="block block9"></div>
+          <div class="block block10"></div>
+          <div class="block block11"></div>
+          <div class="block block12"></div>
+          <div class="block block13"></div>
+          <div class="block block14"></div>
+          <div class="block block15"></div>
+        </div>
+        <div class="third_line">
+          <div class="cursor">
+            <div class="triangle"></div>
+            <div class="square"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rectangle_data">
+      <span class="categorie">Data</span>
+      <div class="dashboard">
+        <div class="radar">
+          <div class="point"></div>
+          <div class="circle"></div>
+          <div class="star star1"></div>
+          <div class="star star2"></div>
+          <div class="star star3"></div>
+          <div class="star star4"></div>
+          <div class="star star5"></div>
+          <div class="star star6"></div>
+          <div class="star star7"></div>
+          <div class="star star8"></div>
+          <div class="star star9"></div>
+          <div class="star star10"></div>
+          <div class="star star11"></div>
+          <div class="star star12"></div>
+          <div class="star star13"></div>
+          <div class="star star14"></div>
+          <div class="star star15"></div>
+          <div class="star star16"></div>
+          <div class="star star17"></div>
+          <div class="star star18"></div>
+          <div class="star star19"></div>
+          <div class="star star20"></div>
+          <div class="star star21"></div>
+          <div class="star star22"></div>
+          <div class="star star23"></div>
+          <div class="star star24"></div>
+          <div class="star star25"></div>
+          <div class="star star26"></div>
+          <div class="star star27"></div>
+          <div class="star star28"></div>
+          <div class="star star29"></div>
+          <div class="star star30"></div>
+          <div class="star star31"></div>
+          <div class="star star32"></div>
+          <div class="star star33"></div>
+          <div class="star star34"></div>
+          <div class="star star35"></div>
+          <div class="star star36"></div>
+          <div class="star star37"></div>
+          <div class="star star38"></div>
+          <div class="star star39"></div>
+          <div class="star star40"></div>
+          <div class="color"></div>
+          <div class="line"></div>
+          <div class="shadow"></div>
+        </div>
+        <div class="horizontal_lines">
+          <div class="triangle triangle1"></div>
+          <div class="backline backline1"></div>
+          <div class="line line1"></div>
+          <div class="triangle triangle2"></div>
+          <div class="backline backline2"></div>
+          <div class="line line2"></div>
+          <div class="triangle triangle3"></div>
+          <div class="backline backline3"></div>
+          <div class="line line3"></div>
+          <div class="triangle triangle4"></div>
+          <div class="backline backline4"></div>
+          <div class="line line4"></div>
+          <div class="triangle triangle5"></div>
+          <div class="backline backline5"></div>
+          <div class="line line5"></div>
+        </div>
+        <div class="vertical_lines">
+          <div class="first_line">
+            <span class="phase_one">Phase one</span>
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+            <div class="line line4"></div>
+            <div class="line line5"></div>
+            <div class="line line6"></div>
+            <div class="line line7"></div>
+            <div class="line line8"></div>
+            <div class="line line9"></div>
+            <div class="line line10"></div>
+            <div class="line line11"></div>
+            <div class="line line12"></div>
+            <div class="line line13"></div>
+            <div class="line line14"></div>
+            <div class="line line15"></div>
+            <div class="line line16"></div>
+            <div class="line line17"></div>
+            <div class="line line18"></div>
+            <div class="line line19"></div>
+            <div class="line line20"></div>
+          </div>
+          <div class="second_line">
+            <span class="phase_two">Phase two</span>
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+            <div class="line line4"></div>
+            <div class="line line5"></div>
+            <div class="line line6"></div>
+            <div class="line line7"></div>
+            <div class="line line8"></div>
+            <div class="line line9"></div>
+            <div class="line line10"></div>
+            <div class="line line11"></div>
+            <div class="line line12"></div>
+            <div class="line line13"></div>
+            <div class="line line14"></div>
+            <div class="line line15"></div>
+            <div class="line line16"></div>
+            <div class="line line17"></div>
+            <div class="line line18"></div>
+            <div class="line line19"></div>
+            <div class="line line20"></div>
+          </div>
+        </div>
+      </div>
+      <div class="vertical_graphic">
+        <div class="graphic">
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+          <div class="line line3"></div>
+          <div class="line line4"></div>
+          <div class="line line5"></div>
+          <div class="line line6"></div>
+          <div class="line line7"></div>
+          <div class="line line8"></div>
+          <div class="line line9"></div>
+          <div class="line line10"></div>
+          <div class="line line11"></div>
+          <div class="line line12"></div>
+          <div class="line line13"></div>
+          <div class="line line14"></div>
+          <div class="line line15"></div>
+          <div class="line line16"></div>
+          <div class="line line17"></div>
+          <div class="line line18"></div>
+          <div class="line line19"></div>
+          <div class="line line20"></div>
+          <div class="line line21"></div>
+          <div class="line line22"></div>
+          <div class="line line23"></div>
+          <div class="line line24"></div>
+          <div class="line line25"></div>
+          <div class="line line26"></div>
+          <div class="line line27"></div>
+          <div class="line line28"></div>
+          <div class="line line29"></div>
+          <div class="line line30"></div>
+          <div class="line line31"></div>
+          <div class="line line32"></div>
+          <div class="line line33"></div>
+          <div class="line line34"></div>
+          <div class="line line35"></div>
+          <div class="line line36"></div>
+          <div class="line line37"></div>
+          <div class="line line38"></div>
+          <div class="line line39"></div>
+          <div class="line line40"></div>
+          <div class="line line41"></div>
+          <div class="line line42"></div>
+          <div class="line line43"></div>
+        </div>
+        <div class="data">
+          <span class="span1">782</span>
+          <span class="span2">682</span>
+          <span class="span3">640</span>
+          <span class="span4">572</span>
+          <span class="span5">559</span>
+          <span class="span6">514</span>
+          <span class="span7">497</span>
+        </div>
+      </div>
+    </div>
+    <div class="main_sphere">
+      <div class="planet planet1"></div>
+      <div class="planet planet2"></div>
+      <div class="planet planet3"></div>
+      <div class="planet planet4"></div>
+      <div class="planet planet5"></div>
+    </div>
+    <div class="circles">
+      <div class="circle circle1"></div>
+      <div class="circle circle2"></div>
+      <div class="circle circle3"></div>
+      <div class="circle circle4"></div>
+      <div class="circle circle5"></div>
+      <div class="circle circle6"></div>
+      <div class="circle circle7"></div>
+      <div class="circle circle8"></div>
+      <div class="circle circle9"></div>
+      <div class="circle circle10"></div>
+      <img class="nasa_logo" src="images/nasa_logo.png" alt="Logo de la nasa">
+      <div class="close_menu">
+        <div class="bar2_cross"></div>
+        <div class="bar1_cross"></div>
+      </div>
+    </div>
+    <span class="welcome"></span>
+    <div class="vocal_button">
+      <div class="first_circle">
+        <div class="second_circle">
+          <div class="third_circle">
+          </div>
+        </div>
+      </div>
+      <div class="vocal_effect">
+        <div class="equalizer">
+          <div class="bar bar-1"></div>
+          <div class="bar bar-2"></div>
+          <div class="bar bar-3"></div>
+          <div class="bar bar-4"></div>
+          <div class="bar bar-5"></div>
+          <div class="bar bar-6"></div>
+          <div class="bar bar-7"></div>
+          <div class="bar bar-8"></div>
+          <div class="bar bar-9"></div>
+          <div class="bar bar-10"></div>
+          <div class="bar bar-11"></div>
+        </div>
+      </div>
+    </div>
+    <div class="rectangle_target">
+      <span class="planet_name">Xaron</span>
+      <div class="circles">
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+        <div class="circle circle4"></div>
+        <div class="circle circle5"></div>
+        <div class="circle circle6"></div>
+        <div class="circle circle7"></div>
+        <div class="circle circle8"></div>
+        <div class="circle circle9"></div>
+        <div class="circle circle10"></div>
+        <div class="circle circle11"></div>
+        <div class="circle circle12"></div>
+        <div class="circle circle13"></div>
+        <div class="circle circle14"></div>
+        <div class="circle circle15"></div>
+        <div class="circle circle16"></div>
+        <div class="circle circle17"></div>
+        <div class="circle circle18"></div>
+        <div class="circle circle19"></div>
+        <div class="circle circle20"></div>
+        <div class="circle circle21"></div>
+        <div class="circle circle22"></div>
+        <div class="circle circle23"></div>
+        <div class="circle circle24"></div>
+        <div class="circle circle25"></div>
+        <div class="circle circle_horizontal circle26"></div>
+        <div class="circle circle_horizontal circle27"></div>
+        <div class="circle circle_horizontal circle28"></div>
+        <div class="circle circle_horizontal circle29"></div>
+        <div class="circle circle_horizontal circle30"></div>
+        <div class="circle circle_horizontal circle31"></div>
+        <div class="circle circle_horizontal circle32"></div>
+        <div class="circle circle_horizontal circle33"></div>
+        <div class="circle circle_horizontal circle34"></div>
+        <div class="circle circle_horizontal circle35"></div>
+        <div class="circle circle_horizontal circle36"></div>
+        <div class="circle circle_horizontal circle37"></div>
+        <div class="circle circle_horizontal circle38"></div>
+        <div class="circle circle_horizontal circle39"></div>
+        <div class="circle circle_horizontal circle40"></div>
+        <div class="circle circle_horizontal circle41"></div>
+        <div class="circle circle_horizontal circle42"></div>
+        <div class="circle circle_horizontal circle43"></div>
+        <div class="circle circle_horizontal circle44"></div>
+        <div class="circle circle_horizontal circle45"></div>
+        <div class="circle circle_horizontal circle46"></div>
+        <div class="circle circle_horizontal circle47"></div>
+        <div class="circle circle_horizontal circle48"></div>
+        <div class="circle circle_horizontal circle49"></div>
+        <div class="circle circle_horizontal circle50"></div>
+      </div>
+      <div class="compass">
+        <span class="north">N</span>
+        <span class="east">E</span>
+        <span class="south">S</span>
+        <span class="west">W</span>
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="line line3"></div>
+        <div class="line line4"></div>
+        <div class="cursor"></div>
+      </div>
+      <span class="composition">Composition</span>
+      <span class="solid active">Solid</span>
+      <span class="gaz">Gaz</span>
+    </div>
+    <span class="message">Click on a planet</span>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

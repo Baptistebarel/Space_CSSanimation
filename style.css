@@ -1,0 +1,2366 @@
+html{
+    height: 100%;
+}
+    
+body{
+    height: 100%;
+    margin: 0;
+}
+
+
+.container{
+    height: 100%;
+    position: relative;
+    perspective: 800px;
+    background: #000;
+}
+
+.container *{
+    transform-style: preserve-3d;
+}
+
+/*************
+
+input keywords
+
+*************/
+
+div.background{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 5;
+    opacity: 0.9;
+}
+
+div.name{
+    position: absolute;
+    top:20%;
+    left: 40%;
+    background: rgba(0, 0, 0, 0.63);
+    border: rgb(73, 74, 85) solid 1px;
+    border-radius: 5%;
+    width: 20%;
+    height: 30%;
+    z-index: 6;
+    animation-name: block_input_animation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes block_input_animation{
+    0%  {transform: translateX(0%) translateY(0%);}
+    100%{transform: translateX(1%) translateY(1%);}
+}
+
+div.name p{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    margin: 0;
+    text-align: center;
+    font-size: 150%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+
+
+div.name input{
+    position: absolute;
+    left: 25%;
+    top: 45%;
+    width: 50%;
+    height: 15%;
+    font-size: 150%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+div.name button{
+    position: absolute;
+    top: 75%;
+    left: 30%;
+    width: 40%;
+    height: 15%;;
+    background: #fff;
+    border-radius: 6%;
+    font-size: 150%;
+}
+
+/*************
+
+Road_star
+
+*************/
+
+div.background .stars_road{
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    height: 35%;
+    background-image: url("images/star.jpg");
+}
+
+div.background .stars_road img{
+    position: absolute;
+    top: 50%;
+    left: -5%;
+    width: 30px;
+    height: 20px;
+    animation-name: rocket;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    will-change: transform;
+}
+
+@keyframes rocket{
+    0%  {transform: translateX(0px) translateY(0px) rotate(40deg);}
+    10% {transform: translateX(200px) translateY(0px) rotate(0deg);}
+    20% {transform: translateX(300px) translateY(-60px) rotate(80deg);}
+    30% {transform: translateX(500px) translateY(80px) rotate(40deg);}
+    40% {transform: translateX(600px) translateY(80px) rotate(0deg);}
+    50% {transform: translateX(800px) translateY(-40px) rotate(80deg);}
+    60% {transform: translateX(1000px) translateY(40px) rotate(40deg);}
+    70% {transform: translateX(1200px) translateY(40px) rotate(0deg);}
+    80% {transform: translateX(1400px) translateY(0px) rotate(40deg);}
+    90% {transform: translateX(1600px) translateY(80px) rotate(0deg);}
+    100%{transform: translateX(2600px) translateY(0px) rotate(0deg);}
+}
+
+
+/*************
+
+Animation planet
+
+*************/
+
+.planet_roadmap{
+    position: absolute;
+    top: 58%;
+    left: 15%;
+    width: 80%;
+    height: 35%;
+}
+
+.planet_roadmap .planet{
+    position: absolute;
+    top: 17.5%;
+    border-radius: 50%;
+    position: absolute;
+    width: 10%;
+    height: 40%;
+    background: red;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+.planet_roadmap .planet1{
+    left:0%;
+    background: white;
+    box-shadow:
+    inset 0 0 50px #fff,     
+    inset 20px 0 80px rgb(199, 25, 25),   
+    inset -20px 0 80px rgb(140, 0, 255),  
+    inset 20px 0 300px rgb(199, 25, 25),   
+    inset -20px 0 300px rgb(140, 0, 255), 
+    0 0 50px #fff,            
+    -10px 0 80px rgb(199, 25, 25),           
+    10px 0 80px rgb(140, 0, 255);
+    animation-name: planet1_apparition;
+    will-change: opacity;
+}
+
+.planet_roadmap .planet2{
+    left:20%;
+    background: white;
+    box-shadow:
+    inset 0 0 50px #fff,      
+    inset 20px 0 80px rgb(196, 161, 6),   
+    inset -20px 0 80px rgb(180, 74, 3),  
+    inset 20px 0 300px rgb(196, 161, 6),   
+    inset -20px 0 300px rgb(180, 74, 3), 
+    0 0 50px #fff,            
+    -10px 0 80px rgb(196, 161, 6),           
+    10px 0 80px rgb(180, 74, 3);
+    animation-name: planet2_apparition;
+    will-change: opacity;
+}
+
+.planet_roadmap .planet3{
+    left:40%;
+    background: white;
+    box-shadow:
+    inset 0 0 50px #fff,      
+    inset 20px 0 80px rgb(56, 145, 85),   
+    inset -20px 0 80px rgb(15, 255, 235),  
+    inset 20px 0 300px rgb(56, 145, 85),   
+    inset -20px 0 300px rgb(15, 255, 235), 
+    0 0 50px #fff,            
+    -10px 0 80px rgb(56, 145, 85),           
+    10px 0 80px rgb(15, 255, 235);  
+    animation-name: planet3_apparition;
+    will-change: opacity;
+}
+
+.planet_roadmap .planet4{
+    left:60%;
+    background: white;
+    box-shadow:
+    inset 0 0 50px #fff,      
+    inset 20px 0 80px rgb(64, 8, 155),   
+    inset -20px 0 80px rgb(5, 77, 231),  
+    inset 20px 0 300px rgb(64, 8, 155),   
+    inset -20px 0 300px rgb(5, 77, 231), 
+    0 0 50px #fff,            
+    -10px 0 80px rgb(64, 8, 155),           
+    10px 0 80px rgb(5, 77, 231);  
+    animation-name: planet4_apparition;
+    will-change: opacity;
+}
+
+.planet_roadmap .planet5{
+    left:80%;
+    background: white;
+    box-shadow:
+    inset 0 0 50px #fff,      
+    inset 20px 0 80px #f0f,   
+    inset -20px 0 80px #0ff,  
+    inset 20px 0 300px #f0f,   
+    inset -20px 0 300px #0ff, 
+    0 0 50px #fff,            
+    -10px 0 80px #f0f,           
+    10px 0 80px #0ff;   
+    animation-name: planet5_apparition;
+    will-change: opacity;
+}
+
+.background .line{
+    position: absolute;
+    top: 70%;
+    left: 16%;
+    width: 0%;
+    height: 1%;
+    border-bottom: #fff 2px dashed;
+    z-index: -1;
+    animation-name: line_apparition;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    will-change: width;
+}
+
+@keyframes planet1_apparition{
+    0%  {opacity: 0;}
+    20% {opacity: 1;}
+    40% {opacity: 1;}
+    60% {opacity: 1;}
+    80% {opacity: 1;}
+    100%{opacity: 1;}
+}
+
+@keyframes planet2_apparition{
+    0%  {opacity: 0;}
+    20% {opacity: 0;}
+    40% {opacity: 1;}
+    60% {opacity: 1;}
+    80% {opacity: 1;}
+    100%{opacity: 1;}
+}
+
+@keyframes planet3_apparition{
+    0%  {opacity: 0;}
+    20% {opacity: 0;}
+    40% {opacity: 0;}
+    60% {opacity: 1;}
+    80% {opacity: 1;}
+    100%{opacity: 1;}
+}
+
+@keyframes planet4_apparition{
+    0%  {opacity: 0;}
+    20% {opacity: 0;}
+    40% {opacity: 0;}
+    60% {opacity: 0;}
+    80% {opacity: 1;}
+    100%{opacity: 1;}
+}
+
+@keyframes planet5_apparition{
+    0%  {opacity: 0;}
+    20% {opacity: 0;}
+    40% {opacity: 0;}
+    60% {opacity: 0;}
+    80% {opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@keyframes line_apparition{
+    0%  {width: 0%;}
+    100%{width: 70%}
+}
+
+/*************
+
+rectangle flight 
+
+*************/
+
+.rectangle_flight{
+    display: none;
+    background: rgba(0, 0, 0, 0.63);
+    border: rgb(73, 74, 85) solid 1px;
+    border-radius: 3%;
+    height: 24%;
+    width: 27%;
+    position: absolute;
+    top: 6%;
+    left: 1.5%;
+    will-change: transform;
+}
+
+.rectangle_flight.open{
+    animation-name: open1;
+    animation-duration: 1s;
+    display: block;
+}
+
+@keyframes open1{
+    0%  {transform: translateY(-150%)}
+    100%{transform: translateY(0%);}
+}
+
+
+.rectangle_flight span.categorie{
+    position: absolute;
+    top: -8%;
+    left: 1.5%;
+    font-family: 'Faster One', cursive;
+    color: white;
+    font-size: 150%;
+}
+
+/*************
+
+rectangle flight cursor time left
+
+*************/
+
+.rectangle_flight span.hour{
+    position: absolute;
+    top: 5%;
+    left: 60%;
+    font-family: 'Faster One', cursive;
+    color: white;
+    font-size: 120%;
+}
+
+.rectangle_flight .bar{
+    position: absolute;
+    left: 5%;
+    top: 7%;
+    border-radius: 0.5em;
+    width: 50%;
+    height: 5%;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
+    background: #fff;
+}
+
+.rectangle_flight .bar2{
+    position: absolute;
+    border-radius: 0.5em;
+    height: 100%;
+    width: 95%;
+    background: rgb(7, 124, 153);
+}
+
+.rectangle_flight .bar2.planet1_change{
+    width: 70%;
+}
+
+.rectangle_flight .bar2.planet2_change{
+    width: 50%;
+}
+
+.rectangle_flight .bar2.planet3_change{
+    width: 32%;
+}
+
+.rectangle_flight .bar2.planet4_change{
+    width: 13%;
+}
+
+/*************
+
+rectangle flight arc
+
+*************/
+
+.rectangle_flight .arc1{
+    position: absolute;
+    top: 8%;
+    left: -20%;
+    width: 60%;
+    height: 60%;
+    transform: rotateY(180deg) translateZ(-1px);
+}
+
+.rectangle_flight .txt_arc1{
+    color: #fff;
+    position: absolute;
+    left:16%;
+    top: 40%;
+    font-family: 'Contrail One', cursive;
+    font-size: 130%;
+}
+
+.rectangle_flight .reactor1{
+    color: rgb(20, 97, 160);
+    position: absolute;
+    left:14%;
+    top: 53%;
+    font-family: 'Contrail One', cursive;
+    font-size: 80%;
+}
+
+.rectangle_flight .arc2{
+    position: absolute;
+    top: 8%;
+    left: 10%;
+    width: 60%;
+    height: 60%;
+    transform: rotateY(180deg) translateZ(-1px);
+}
+
+.rectangle_flight .txt_arc2{
+    color: #fff;
+    position: absolute;
+    left:46%;
+    top: 40%;
+    font-family: 'Contrail One', cursive;
+    font-size: 130%;
+}
+
+.rectangle_flight .reactor2{
+    color: rgb(20, 97, 160);
+    position: absolute;
+    left:44%;
+    top: 53%;
+    font-family: 'Contrail One', cursive;
+    font-size: 80%;
+}
+
+.rectangle_flight .arc3{
+    position: absolute;
+    top: 8%;
+    left: 40%;
+    width: 60%;
+    height: 60%;
+    transform: rotateY(180deg) translateZ(-1px);
+}
+
+.rectangle_flight .txt_arc3{
+    color: #fff;
+    position: absolute;
+    left:76%;
+    top: 40%;
+    font-family: 'Contrail One', cursive;
+    font-size: 130%;
+}
+
+.rectangle_flight .reactor3{
+    color: rgb(20, 97, 160);
+    position: absolute;
+    left:74%;
+    top: 53%;
+    font-family: 'Contrail One', cursive;
+    font-size: 80%;
+}
+
+/*************
+
+rectangle flight button
+
+*************/
+
+.rectangle_flight .buttons{
+    position: absolute;
+    top: 65%;
+    left: 5%;
+    width: 90%;
+    height: 30%;
+}
+
+.rectangle_flight .buttonv1{
+    background: #3b2c85;;
+    position: absolute;
+    left: 2%;
+    width: 13%;
+    height: 45%;
+    opacity: 0.5;
+    animation-name: buttons1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.rectangle_flight .buttonv2{
+    background: red;
+    position: absolute;
+    left: 2%;
+    width: 13%;
+    height: 45%;
+    opacity: 0.5;
+    animation-name: buttons2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.rectangle_flight .buttonv3{
+    background: red;
+    position: absolute;
+    left: 2%;
+    width: 13%;
+    height: 45%;
+    opacity: 0.5;
+    animation-name: buttons3;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.rectangle_flight .button2{animation-delay:0.5s; background: #2c2828; top: 56%;}
+.rectangle_flight .button3{animation-delay:1.5s; background: #481380; left: 18%;}
+.rectangle_flight .button4{animation-delay:1s; background: #3b2c85; left: 18%; top: 56%;}
+.rectangle_flight .button5{animation-delay:0.2s; background: #742dd2; left: 36%;}
+.rectangle_flight .button6{animation-delay:1.8s; background: #219897; left: 36%; top: 56%;}
+.rectangle_flight .button7{animation-delay:1s; background: #efb1ff; left: 52%;}
+.rectangle_flight .button8{animation-delay:0s; background: #85cfcb; left:52%; top: 56%;}
+.rectangle_flight .button9{animation-delay:1.3s; background: #ffe2ff; left: 69%;}
+.rectangle_flight .button10{animation-delay:0.5s; background: #2c2828; left: 69%; top: 56%;}
+.rectangle_flight .button11{animation-delay:1.8s; background: #481380; left: 85%;}
+.rectangle_flight .button12{animation-delay:1.5s; background: #3b2c85; left: 85%; top: 56%;}
+
+@keyframes buttons1{
+    0%  {opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@keyframes buttons2{
+    0%  {opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@keyframes buttons3{
+    0%  {opacity: 0;}
+    100%{opacity: 1;}
+}
+
+
+/*************
+
+rectangle weather climate
+
+*************/
+
+
+.rectangle_weather{
+    display: none;
+    background: rgba(0, 0, 0, 0.63);
+    border: rgb(73, 74, 85) solid 1px;
+    border-radius: 2%;
+    height: 20%;
+    width: 27%;
+    position: absolute;
+    top: 35%;
+    left: 1.5%;
+    transform: translateX(-150%);
+    will-change: transform;
+}
+
+.rectangle_weather.open{
+    transform: translateX(0%);
+    animation-name: open2;
+    animation-duration: 1s;
+    display: block;
+}
+
+@keyframes open2{
+    0%  {transform: translateX(-150%);}
+    100%{transform: translateX(0%);}
+}
+
+
+.rectangle_weather span.categorie{
+    position: absolute;
+    top: -10%;
+    left: 1.5%;
+    font-family: 'Faster One', cursive;
+    color: white;
+    font-size: 150%;
+}
+
+.rectangle_weather .climate{
+    width: 25%;
+    height: 60%;
+    position: absolute;
+    left: 6%;
+    top: 20%;
+}
+
+/** Sun **/
+
+.rectangle_weather .sun{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.rectangle_weather .sun .circle{
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+    position: absolute;
+    background: rgb(6, 103, 121);
+}
+
+.rectangle_weather .sun .sunray{
+    width: 4%;
+    height: 15%;
+    border-radius: 25%;
+    background: rgb(6, 103, 121);
+    position: absolute;
+}
+
+.rectangle_weather .sun .sunray1{
+    animation-name: sun;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+.rectangle_weather .sun .sunray2{
+    animation-name: sun2;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+.rectangle_weather .sun .sunray3{
+    animation-name: sun3;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+.rectangle_weather .sun .sunray4{
+    animation-name: sun4;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+.rectangle_weather .sun .sunray5{
+    animation-name: sun5;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+.rectangle_weather .sun .sunray6{
+    animation-name: sun6;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+.rectangle_weather .sun .sunray7{
+    animation-name: sun7;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+.rectangle_weather .sun .sunray8{
+    animation-name: sun8;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes sun{
+    0%{transform:translateY(25px);}
+    50%{transform:translateY(35px);}
+    100%{transform: translateY(50px);}
+}
+@keyframes sun2{
+    0%{transform: rotate(45deg) translateY(25px);}
+    50%{transform: rotate(45deg) translateY(35px);}
+    100%{transform: rotate(45deg) translateY(50px);}
+}
+@keyframes sun3{
+    0%{transform: rotate(90deg) translateY(25px);}
+    50%{transform: rotate(90deg) translateY(35px);}
+    100%{transform: rotate(90deg) translateY(50px);}
+}
+@keyframes sun4{
+    0%{transform: rotate(135deg) translateY(25px);}
+    50%{transform: rotate(135deg) translateY(35px);}
+    100%{transform: rotate(135deg) translateY(50px);}
+}
+@keyframes sun5{
+    0%{transform: rotate(180deg) translateY(25px);}
+    50%{transform: rotate(180deg) translateY(35px);}
+    100%{transform: rotate(180deg) translateY(50px);}
+}
+@keyframes sun6{
+    0%{transform: rotate(225deg) translateY(25px);}
+    50%{transform: rotate(225deg) translateY(35px);}
+    100%{transform: rotate(225deg) translateY(50px);}
+}
+@keyframes sun7{
+    0%{transform: rotate(270deg) translateY(25px);}
+    50%{transform: rotate(270deg) translateY(35px);}
+    100%{transform: rotate(270deg) translateY(50px);}
+}
+@keyframes sun8{
+    0%{transform: rotate(315deg) translateY(25px);}
+    50%{transform: rotate(315deg) translateY(35px);}
+    100%{transform: rotate(315deg) translateY(50px);}
+}
+
+/** Clouds **/
+
+.rectangle_weather .clouds{
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.rectangle_weather .cloud{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rectangle_weather .cloud2{
+    transform: translateX(20%) translateY(-15%);
+    width: 80%;
+    height: 80%;
+    z-index: -1;
+    animation-name: cloud2;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.rectangle_weather .cloud.cloud2 .cloud2_color{
+    background: rgb(110, 108, 105);
+}
+
+.rectangle_weather .cloud .cloud_rectangle{
+    position: absolute;
+    width: 45%;
+    height: 15%;
+    background: white;
+}
+
+.rectangle_weather .cloud .cloud_circle1{
+    position: absolute;
+    border-radius: 50%;
+    width: 22%;
+    height: 22%;
+    transform: translateX(-105%) translateY(-16%);
+    background: white;
+}
+
+.rectangle_weather .cloud .cloud_circle2{
+    position: absolute;
+    border-radius: 50%;
+    width: 17%;
+    height: 17%;
+    transform: translateX(142%) translateY(-6%);
+    background: white;
+}
+
+.rectangle_weather .cloud .cloud_circle3{
+    position: absolute;
+    border-radius: 50%;
+    width: 20%;
+    height: 20%;
+    transform: translateX(85%) translateY(-55%);
+    background: white;
+}
+
+.rectangle_weather .cloud .cloud_circle4{
+    position: absolute;
+    border-radius: 50%;
+    width: 35%;
+    height: 35%;
+    transform: translateX(-20%) translateY(-30%);
+    background: white;
+}
+
+.rectangle_weather .clouds .smog{
+    position: absolute;
+    width: 60%;
+    height: 4%;
+    background: rgb(110, 108, 105);
+    border-radius: 0.5em;
+    animation-name: smog;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rectangle_weather .clouds .smog1{
+    top: 68%;
+    animation-delay: 0.5s;
+}
+
+.rectangle_weather .clouds .smog2{
+    top: 78%;
+    animation-delay: 1s;
+}
+
+@keyframes cloud2{
+    0%  {transform: translateX(20%) translateY(-15%);}
+    100%{transform: translateX(30%) translateY(-15%);}
+}
+
+@keyframes smog{
+    0%  {left: 20%; opacity: 0.7;}
+    100%{left: 30%; opacity: 0.2;}
+}
+
+/** Clouds rain **/
+
+.rectangle_weather .clouds_rain{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rectangle_weather .clouds_rain .rain{
+    width: 4%;
+    height: 10%;
+    border-radius: 25%;
+    background: rgb(6, 103, 121);
+    position: absolute;
+    animation-name: rain;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rectangle_weather .clouds_rain .rain.rain1{top: 65%; left: 30%; animation-delay: 0.5s;}
+.rectangle_weather .clouds_rain .rain.rain2{top: 65%; left: 50%; animation-delay: 0.1s;}
+.rectangle_weather .clouds_rain .rain.rain3{top: 65%; left: 70%; animation-delay: 0.9s;}
+.rectangle_weather .clouds_rain .rain.rain4{top: 85%; left: 40%; animation-delay: 0.8s;}
+.rectangle_weather .clouds_rain .rain.rain5{top: 85%; left: 60%; animation-delay: 0.5s;}
+
+@keyframes rain{
+    0%  {transform: translateY(0%); opacity: 1;}
+    100%{transform: translateY(100%); opacity: 0.6;}
+}
+
+/** Clouds lightning **/
+
+.rectangle_weather .lightning{
+    width: 100%;
+    height: 100%;
+    top: 55%;
+    left: 40%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.rectangle_weather .lightning .thunder{
+    animation-name: lightning;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    background: yellow;
+    position: absolute;
+}
+
+.rectangle_weather .lightning .lightning1{
+    width: 5%;
+    height: 23%;
+    top: 48%;
+    left: 40%;
+    transform: skewX(-50deg);
+    z-index: -1;
+    animation-delay: 0.2s;
+}
+
+.rectangle_weather .lightning .lightning2{
+    width: 3%;
+    height: 34%;
+    top: 53%;
+    left: 42%;
+    transform: rotate(80deg);
+    animation-delay: 0.4s;
+}
+
+.rectangle_weather .lightning .lightning3{
+    width: 5%;
+    height: 20%;
+    top: 68%;
+    left: 45%;
+    transform: skewX(-50deg);
+    animation-delay: 0.6s;
+}
+
+@keyframes lightning{
+    0%  {opacity: 0}
+    100%{opacity: 1}
+}
+
+/*************
+
+rectangle_weather text
+
+*************/
+
+
+.rectangle_weather .air{
+    position: absolute;
+    top: 24%;
+    left: 40%;
+    font-size: 160%;
+    font-family: 'Contrail One', cursive;
+    color: #fff;
+}
+
+.rectangle_weather .temperature{
+    position: absolute;
+    top: 55%;
+    left: 38%;
+    font-size: 160%;
+    font-family: 'Contrail One', cursive;
+    color: #fff;
+}
+
+/*************
+
+rectangle weather cursor1
+
+*************/
+
+
+.rectangle_weather .setting{
+    position: absolute;
+    top: 5%;
+    left: 58%;
+    width: 17%;
+    height: 90%;
+}
+
+.rectangle_weather .cursor1 .first_line{
+    position: absolute;
+    top: 5%;
+    width: 50%;
+    height: 90%;
+}
+
+.rectangle_weather .cursor1 .first_line .block{
+    background: #fff;
+    position: absolute;
+    left: 20%;
+    width: 75%;
+    height: 8%;
+}
+
+.rectangle_weather .cursor1 .first_line .block2{top: 15%;}
+.rectangle_weather .cursor1 .first_line .block3{top: 30%;}
+.rectangle_weather .cursor1 .first_line .block4{top: 45%;}
+.rectangle_weather .cursor1 .first_line .block5{top: 60%;}
+.rectangle_weather .cursor1 .first_line .block6{top: 75%;}
+.rectangle_weather .cursor1 .first_line .block7{top: 90%;}
+
+
+.rectangle_weather .cursor1 .second_line{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    width: 25%;
+    height: 90%;
+}
+
+.rectangle_weather .cursor1 .second_line .block{
+    background: #fff;
+    position: absolute;
+    width: 80%;
+    height: 2%;
+}
+
+.rectangle_weather .cursor1 .second_line .block1{width: 120%;}
+.rectangle_weather .cursor1 .second_line .block2{top: 5%;}
+.rectangle_weather .cursor1 .second_line .block3{top: 11%;}
+.rectangle_weather .cursor1 .second_line .block4{top: 18%;}
+.rectangle_weather .cursor1 .second_line .block5{top: 26%;}
+.rectangle_weather .cursor1 .second_line .block6{top: 35%;}
+.rectangle_weather .cursor1 .second_line .block7{top: 42%;}
+.rectangle_weather .cursor1 .second_line .block8{top: 47.5%; width: 120%;}
+.rectangle_weather .cursor1 .second_line .block9{top: 53%;}
+.rectangle_weather .cursor1 .second_line .block10{top: 60%;}
+.rectangle_weather .cursor1 .second_line .block11{top: 67%;}
+.rectangle_weather .cursor1 .second_line .block12{top: 75%;}
+.rectangle_weather .cursor1 .second_line .block13{top: 82%;}
+.rectangle_weather .cursor1 .second_line .block14{top: 88%;}
+.rectangle_weather .cursor1 .second_line .block15{top: 96%; width: 120%;}
+
+
+.rectangle_weather .cursor1 .third_line{
+    position: absolute;
+    top: 5%;
+    left: 75%;
+    width: 25%;
+    height: 90%;
+}
+
+.rectangle_weather .cursor1 .third_line .cursor{
+    position: absolute;
+    left: 10%;
+    width: 90%;
+    height: 8%;
+    animation-name: cursor;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.rectangle_weather .cursor1 .third_line .cursor .triangle{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-right: 7px solid #fff;
+    will-change: transform;
+}
+
+.rectangle_weather .cursor1 .third_line .cursor .square{
+    position: absolute;
+    left: 40%;
+    width: 60%;
+    height: 100%;
+    background: #fff;
+    will-change: transform;
+}
+
+@keyframes cursor{
+    0%   {top:0%;}
+    10%  {top:50%;}
+    20%  {top:90%;}
+    30%  {top:20%;}
+    40%  {top:70%;}
+    50%  {top:10%;}
+    60%  {top:40%;}
+    70%  {top:90%;}
+    80%  {top:35%;}
+    90%  {top:75%;}
+    100% {top:50%;}
+}
+
+
+/****************
+
+rectangle weather cursor2 
+
+****************/
+
+
+.rectangle_weather .cursor2{
+    position: absolute;
+    top: 5%;
+    left: 80%;
+    width: 17%;
+    height: 90%;
+    transform: rotateY(180deg) translateZ(-1px);
+}
+
+.rectangle_weather .cursor2 .first_line{
+    position: absolute;
+    top: 5%;
+    width: 50%;
+    height: 90%;
+}
+
+.rectangle_weather .cursor2 .first_line .block{
+    background: #fff;
+    position: absolute;
+    left: 20%;
+    width: 75%;
+    height: 8%;
+}
+
+.rectangle_weather .cursor2 .first_line .block2{top: 15%;}
+.rectangle_weather .cursor2 .first_line .block3{top: 30%;}
+.rectangle_weather .cursor2 .first_line .block4{top: 45%;}
+.rectangle_weather .cursor2 .first_line .block5{top: 60%;}
+.rectangle_weather .cursor2 .first_line .block6{top: 75%;}
+.rectangle_weather .cursor2 .first_line .block7{top: 90%;}
+
+
+.rectangle_weather .cursor2 .second_line{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    width: 25%;
+    height: 90%;
+}
+
+.rectangle_weather .cursor2 .second_line .block{
+    background: #fff;
+    position: absolute;
+    width: 80%;
+    height: 2%;
+}
+
+.rectangle_weather .cursor2 .second_line .block1{width: 120%;}
+.rectangle_weather .cursor2 .second_line .block2{top: 5%;}
+.rectangle_weather .cursor2 .second_line .block3{top: 11%;}
+.rectangle_weather .cursor2 .second_line .block4{top: 18%;}
+.rectangle_weather .cursor2 .second_line .block5{top: 26%;}
+.rectangle_weather .cursor2 .second_line .block6{top: 35%;}
+.rectangle_weather .cursor2 .second_line .block7{top: 42%;}
+.rectangle_weather .cursor2 .second_line .block8{top: 47.5%; width: 120%;}
+.rectangle_weather .cursor2 .second_line .block9{top: 53%;}
+.rectangle_weather .cursor2 .second_line .block10{top: 60%;}
+.rectangle_weather .cursor2 .second_line .block11{top: 67%;}
+.rectangle_weather .cursor2 .second_line .block12{top: 75%;}
+.rectangle_weather .cursor2 .second_line .block13{top: 82%;}
+.rectangle_weather .cursor2 .second_line .block14{top: 88%;}
+.rectangle_weather .cursor2 .second_line .block15{top: 96%; width: 120%;}
+
+
+.rectangle_weather .cursor2 .third_line{
+    position: absolute;
+    top: 5%;
+    left: 75%;
+    width: 25%;
+    height: 90%;
+}
+
+.rectangle_weather .cursor2 .third_line .cursor{
+    position: absolute;
+    left: 10%;
+    width: 90%;
+    height: 8%;
+    animation-name: cursor2;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.rectangle_weather .cursor2 .third_line .cursor .triangle{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-right: 7px solid #fff;
+    will-change: transform;
+}
+
+.rectangle_weather .cursor2 .third_line .cursor .square{
+    position: absolute;
+    left: 40%;
+    width: 60%;
+    height: 100%;
+    background: #fff;
+    will-change: transform;
+}
+
+@keyframes cursor2{
+    0%   {top:02%;}
+    10%  {top:70%;}
+    20%  {top:10%;}
+    30%  {top:50%;}
+    40%  {top:20%;}
+    50%  {top:60%;}
+    60%  {top:80%;}
+    70%  {top:40%;}
+    80%  {top:65%;}
+    90%  {top:15%;}
+    100% {top:57%;}
+}
+
+
+/*************
+
+rectangle data 
+
+**************/
+
+.rectangle_data{
+    display: none;
+    background: rgba(0, 0, 0, 0.63);
+    border: rgb(73, 74, 85) solid 1px;
+    border-radius: 3%;
+    height: 33%;
+    width: 27%;
+    position: absolute;
+    top: 60%;
+    left: 1.5%;
+    transform: translateY(150%);
+    will-change: transform;
+}
+
+.rectangle_data.open{
+    transform: translateY(0%);
+    animation-name: open3;
+    animation-duration: 1s;
+    display: block;
+}
+
+@keyframes open3{
+    0%  {transform: translateY(150%)}
+    100%{transform: translateY(0%);}
+}
+
+
+.rectangle_data span.categorie{
+    position: absolute;
+    top: -6%;
+    left: 1.5%;
+    font-family: 'Faster One', cursive;
+    color: #fff;
+    font-size: 150%;
+}
+
+.rectangle_data .dashboard{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 65%;
+    height: 90%;
+}
+
+/*************
+
+rectangle data vertical_line
+
+**************/
+
+.rectangle_data .dashboard .vertical_lines{
+    position: absolute;
+    left: 55%;
+    width: 45%;
+    height: 100%;
+}
+
+.rectangle_data .dashboard .vertical_lines .first_line{
+    position: absolute;
+    left: 10%;
+    width: 45%;
+    height: 100%;
+}
+
+.rectangle_data .dashboard .vertical_lines .first_line .phase_one{
+    position: absolute;
+    top: -3%;
+    left: 5%;
+    font-size: 60%;
+    font-family: 'Contrail One', cursive;
+    color: #fff;
+}
+
+.rectangle_data .dashboard .vertical_lines .first_line .line{
+    position: absolute;
+    top: 5%;
+    width: 100%;
+    height: 2.2%;
+    background:#fff;
+    border-radius: 10%;
+    animation-name: phase_one;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.rectangle_data .dashboard .vertical_lines .first_line .line2{top: 10%; animation-delay: 0.3s;}
+.rectangle_data .dashboard .vertical_lines .first_line .line3{top: 15%; animation-delay: 0.6s;}
+.rectangle_data .dashboard .vertical_lines .first_line .line4{top: 20%; animation-delay: 0.9s}
+.rectangle_data .dashboard .vertical_lines .first_line .line5{top: 25%; animation-delay: 1.2s;}
+.rectangle_data .dashboard .vertical_lines .first_line .line6{top: 30%; animation-delay: 1.5s;}
+.rectangle_data .dashboard .vertical_lines .first_line .line7{top: 35%; animation-delay: 1.8s}
+.rectangle_data .dashboard .vertical_lines .first_line .line8{top: 40%; animation-delay: 2.1s;}
+.rectangle_data .dashboard .vertical_lines .first_line .line9{top: 45%; animation-delay: 2.4s;}
+.rectangle_data .dashboard .vertical_lines .first_line .line10{top: 50%; animation-delay: 2.7s}
+.rectangle_data .dashboard .vertical_lines .first_line .line11{top: 55%; animation-delay: 3s}
+.rectangle_data .dashboard .vertical_lines .first_line .line12{top: 60%; animation-delay: 3.3s}
+.rectangle_data .dashboard .vertical_lines .first_line .line13{top: 65%; animation-delay: 3.6s}
+.rectangle_data .dashboard .vertical_lines .first_line .line14{top: 70%; animation-delay: 3.9s}
+.rectangle_data .dashboard .vertical_lines .first_line .line15{top: 75%; animation-delay: 4.2s}
+.rectangle_data .dashboard .vertical_lines .first_line .line16{top: 80%; animation-delay: 4.5s}
+.rectangle_data .dashboard .vertical_lines .first_line .line17{top: 85%; animation-delay: 4.8s}
+.rectangle_data .dashboard .vertical_lines .first_line .line18{top: 90%; animation-delay: 5.1s}
+.rectangle_data .dashboard .vertical_lines .first_line .line19{top: 95%; animation-delay: 5.4s}
+.rectangle_data .dashboard .vertical_lines .first_line .line20{top: 100%; animation-delay: 5.7s;}
+
+@keyframes phase_one{
+
+    0%  {opacity: 0;}
+    100%{opacity: 1;}
+}
+
+
+.rectangle_data .dashboard .vertical_lines .second_line .phase_two{
+    position: absolute;
+    top: -3%;
+    left: 5%;
+    font-size: 60%;
+    font-family: 'Contrail One', cursive;
+    color: #fff;
+}
+
+.rectangle_data .dashboard .vertical_lines .second_line .line{
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 2.2%;
+    background:#fff;
+    border-radius: 10%;
+    animation-name: phase_one;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.rectangle_data .dashboard .vertical_lines .second_line .line2{top: 95%; animation-delay: 0.3s;}
+.rectangle_data .dashboard .vertical_lines .second_line .line3{top: 90%; animation-delay: 0.6s;}
+.rectangle_data .dashboard .vertical_lines .second_line .line4{top: 85%; animation-delay: 0.9s}
+.rectangle_data .dashboard .vertical_lines .second_line .line5{top: 80%; animation-delay: 1.2s;}
+.rectangle_data .dashboard .vertical_lines .second_line .line6{top: 75%; animation-delay: 1.5s;}
+.rectangle_data .dashboard .vertical_lines .second_line .line7{top: 70%; animation-delay: 1.8s}
+.rectangle_data .dashboard .vertical_lines .second_line .line8{top: 65%; animation-delay: 2.1s;}
+.rectangle_data .dashboard .vertical_lines .second_line .line9{top: 60%; animation-delay: 2.4s;}
+.rectangle_data .dashboard .vertical_lines .second_line .line10{top:55%; animation-delay: 2.7s}
+.rectangle_data .dashboard .vertical_lines .second_line .line11{top: 50%; animation-delay: 3s}
+.rectangle_data .dashboard .vertical_lines .second_line .line12{top: 45%; animation-delay: 3.3s}
+.rectangle_data .dashboard .vertical_lines .second_line .line13{top: 40%; animation-delay: 3.6s}
+.rectangle_data .dashboard .vertical_lines .second_line .line14{top: 35%; animation-delay: 3.9s}
+.rectangle_data .dashboard .vertical_lines .second_line .line15{top: 30%; animation-delay: 4.2s}
+.rectangle_data .dashboard .vertical_lines .second_line .line16{top: 25%; animation-delay: 4.5s}
+.rectangle_data .dashboard .vertical_lines .second_line .line17{top: 20%; animation-delay: 4.8s}
+.rectangle_data .dashboard .vertical_lines .second_line .line18{top: 15%; animation-delay: 5.1s}
+.rectangle_data .dashboard .vertical_lines .second_line .line19{top: 10%; animation-delay: 5.4s}
+.rectangle_data .dashboard .vertical_lines .second_line .line20{top: 5%; animation-delay: 5.7s;}
+
+.rectangle_data .dashboard .vertical_lines .second_line{
+    position: absolute;
+    left: 65%;
+    width: 45%;
+    height: 100%;
+}
+
+/*************
+
+rectangle data horizontal_line
+
+**************/
+
+
+.rectangle_data .dashboard .horizontal_lines{
+    position: absolute;
+    width: 55%;
+    top: 60%;
+    height: 40%;
+}
+
+.rectangle_data .dashboard .horizontal_lines .triangle{
+    position: absolute;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 7px solid #fff;
+    will-change: transform;
+}
+
+.rectangle_data .dashboard .horizontal_lines .triangle1{ top:7%;}
+.rectangle_data .dashboard .horizontal_lines .triangle2{ top:25%;}
+.rectangle_data .dashboard .horizontal_lines .triangle3{ top:45%;}
+.rectangle_data .dashboard .horizontal_lines .triangle4{ top:65%;}
+.rectangle_data .dashboard .horizontal_lines .triangle5{ top:85%;}
+
+.rectangle_data .dashboard .horizontal_lines .line{
+    position: absolute;
+    top: 8%;
+    left: 10%;
+    background: #fff;
+    border-radius: 0.5em;
+    width: 55%;
+    height: 7%;
+    z-index: 2;
+    animation-name: horizontal_line;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.rectangle_data .dashboard .horizontal_lines .line2{top:26%; width: 35%; animation-delay: 0.8s;}
+.rectangle_data .dashboard .horizontal_lines .line3{top:46%; width: 45%; animation-delay: 0.2s;}
+.rectangle_data .dashboard .horizontal_lines .line4{top:66%; width: 55%; animation-delay: 0.9s;}
+.rectangle_data .dashboard .horizontal_lines .line5{top:86%; width: 25%; animation-delay: 0.4s;}
+
+@keyframes horizontal_line{
+    0%  {width: 15%}
+    20% {width: 65%}
+    40% {width: 35%}
+    60% {width: 45%}
+    80% {width: 25%}
+    100%{width: 55%}
+}
+
+
+.rectangle_data .dashboard .horizontal_lines .backline{
+    position: absolute;
+    top: 8%;
+    left: 10%;
+    width: 85%;
+    height: 7%;
+    background: rgba(3, 128, 90, 0.514);
+    border-radius: 0.5em;
+    z-index: 1;
+}
+
+.rectangle_data .dashboard .horizontal_lines .backline2{top:26%;}
+.rectangle_data .dashboard .horizontal_lines .backline3{top:46%;}
+.rectangle_data .dashboard .horizontal_lines .backline4{top:66%;}
+.rectangle_data .dashboard .horizontal_lines .backline5{top:86%;}
+
+/*************
+
+rectangle data radar
+
+**************/
+
+.rectangle_data .dashboard .radar{
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    top: 5%;
+    border-radius: 50%;
+    background: #000;
+}
+
+.rectangle_data .dashboard .radar .point{
+    position: absolute;
+    top: 57%;
+    left: 10%;
+    width: 6%;
+    height: 6%;
+    background: red;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation-name: radar_point;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes radar_point{
+    0%  {top: 57%; left: 10%; opacity:1;}
+    10% {top: 57%; left: 10%; opacity:0;}
+    20% {top: 63%; left: 20%; opacity:1;}
+    30% {top: 63%; left: 20%; opacity:0;}
+    40% {top: 41%; left: 30%; opacity:1;}
+    50% {top: 41%; left: 30%; opacity:0;}
+    60% {top: 50%; left: 40%; opacity:1;}
+    70% {top: 50%; left: 40%; opacity:0;}
+    80% {top: 42%; left: 60%; opacity:1;}
+    90% {top: 42%; left: 60%; opacity:0;}
+    100%{top: 63%; left: 20%; opacity:1;}
+}
+
+
+.rectangle_data .dashboard .radar .star{
+    position: absolute;
+    width: 1%;
+    height: 1%;
+    background: #fff;
+}
+
+.rectangle_data .dashboard .radar .star1{top: 20%; left: 30%;}
+.rectangle_data .dashboard .radar .star2{top: 25%; left: 40%;}
+.rectangle_data .dashboard .radar .star3{top: 35%; left: 10%;}
+.rectangle_data .dashboard .radar .star4{top: 80%; left: 30%;}
+.rectangle_data .dashboard .radar .star5{top: 70%; left: 70%;}
+.rectangle_data .dashboard .radar .star6{top: 10%; left: 75%;}
+.rectangle_data .dashboard .radar .star7{top: 38%; left: 26%;}
+.rectangle_data .dashboard .radar .star8{top: 76%; left: 37%;}
+.rectangle_data .dashboard .radar .star9{top: 45%; left: 85%;}
+.rectangle_data .dashboard .radar .star10{top: 24%; left: 49%;}
+.rectangle_data .dashboard .radar .star11{top: 76%; left: 18%;}
+.rectangle_data .dashboard .radar .star12{top: 56%; left: 37%;}
+.rectangle_data .dashboard .radar .star13{top: 42%; left: 46%;}
+.rectangle_data .dashboard .radar .star14{top: 39%; left: 54%;}
+.rectangle_data .dashboard .radar .star15{top: 90%; left: 70%;}
+.rectangle_data .dashboard .radar .star16{top: 24%; left: 31%;}
+.rectangle_data .dashboard .radar .star17{top: 17%; left: 84%;}
+.rectangle_data .dashboard .radar .star18{top: 38%; left: 57%;}
+.rectangle_data .dashboard .radar .star19{top: 76%; left: 67%;}
+.rectangle_data .dashboard .radar .star20{top: 80%; left: 81%;}
+.rectangle_data .dashboard .radar .star21{top: 59%; left: 27%;}
+.rectangle_data .dashboard .radar .star22{top: 50%; left: 15%;}
+.rectangle_data .dashboard .radar .star23{top: 26%; left: 58%;}
+.rectangle_data .dashboard .radar .star24{top: 34%; left: 63%;}
+.rectangle_data .dashboard .radar .star25{top: 16%; left: 27%;}
+.rectangle_data .dashboard .radar .star26{top: 23%; left: 39%;}
+.rectangle_data .dashboard .radar .star27{top: 46%; left: 42%;}
+.rectangle_data .dashboard .radar .star28{top: 73%; left: 34%;}
+.rectangle_data .dashboard .radar .star29{top: 82%; left: 56%;}
+.rectangle_data .dashboard .radar .star30{top: 14%; left: 80%;}
+.rectangle_data .dashboard .radar .star31{top: 8%; left: 57%;}
+.rectangle_data .dashboard .radar .star32{top: 60%; left: 60%;}
+.rectangle_data .dashboard .radar .star33{top: 62%; left: 42%;}
+.rectangle_data .dashboard .radar .star34{top: 81%; left: 23%;}
+.rectangle_data .dashboard .radar .star35{top: 50%; left: 60%;}
+.rectangle_data .dashboard .radar .star36{top: 53%; left: 70%;}
+.rectangle_data .dashboard .radar .star37{top: 58%; left: 80%;}
+.rectangle_data .dashboard .radar .star38{top: 64%; left: 84%;}
+.rectangle_data .dashboard .radar .star39{top: 25%; left: 75%;}
+.rectangle_data .dashboard .radar .star40{top: 30%; left: 80%;}
+
+
+
+
+.rectangle_data .dashboard .radar .color{
+    position: absolute;
+    background-image: linear-gradient(135deg, rgba(5, 162, 185, 0.8) 0%, rgba(0, 0, 0, 0.02) 70%, rgba(0, 0, 0, 0) 100%);
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    transform-origin: 50% 100%;
+    left: 0.1%;
+    right: 1%;
+    top: 1%;
+    bottom:50%;
+    z-index: 2;
+    animation-name: radar;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+.rectangle_data .dashboard .radar .line{
+    position: absolute;
+    left: 1%;
+    top:50%;
+    width: 49%;
+    height: 0.7%;
+    background: rgba(0, 231, 244, 0.8);
+    z-index: 3;
+    transform-origin: 100%;
+    animation-name: radar;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes radar{
+    0%  {transform: rotate(0deg);}
+    100%{transform: rotate(-360deg);}
+}
+
+
+.rectangle_data .dashboard .radar .shadow{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 66px 2px #A51414;
+    animation-name: shadow;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.rectangle_data .dashboard .radar .shadow.planet1_change{
+    box-shadow: 0 0 66px 2px rgb(20, 165, 85);
+}
+
+.rectangle_data .dashboard .radar .shadow.planet2_change{
+    box-shadow: 0 0 66px 2px rgb(20, 165, 85);
+}
+
+@keyframes shadow{
+    0%  {opacity: 1;}
+    50% {opacity: 0;}
+    100%{opacity: 1;}
+}
+
+/*************
+
+rectangle data vertical_graphic
+
+**************/
+
+.rectangle_data .vertical_graphic{
+    position: absolute;
+    top: 5%;
+    left: 75%;
+    width: 20%;
+    height: 90%;
+}
+
+.rectangle_data .vertical_graphic .graphic{
+    position: absolute;
+    left: 5%;
+    width: 50%;
+    height: 100%;
+    border-left: solid #fff 2px;
+    border-top: solid #fff 1px;
+    border-bottom: solid #fff 1px;
+
+    overflow: hidden;
+}
+
+.rectangle_data .vertical_graphic .graphic .line{
+    background: #fff;
+    position: absolute;
+    width: 40%;
+    height: 1%;
+    animation-name: graphic;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    will-change: auto;
+}
+
+.rectangle_data .vertical_graphic .graphic .line1{top:8%; animation-delay: 0.4s;}
+.rectangle_data .vertical_graphic .graphic .line2{top:10%; animation-delay: 0.9s;}
+.rectangle_data .vertical_graphic .graphic .line3{top:12%; animation-delay: 0.1s;}
+.rectangle_data .vertical_graphic .graphic .line4{top:14%; animation-delay: 0.3s;}
+.rectangle_data .vertical_graphic .graphic .line5{top:16%; animation-delay: 0.2s;}
+.rectangle_data .vertical_graphic .graphic .line6{top:18%; animation-delay: 1s;}
+.rectangle_data .vertical_graphic .graphic .line8{top:20%; animation-delay: 0.3s;}
+.rectangle_data .vertical_graphic .graphic .line7{top:22%; animation-delay: 0.8s;}
+.rectangle_data .vertical_graphic .graphic .line9{top:24%; animation-delay: 0.5s;}
+.rectangle_data .vertical_graphic .graphic .line10{top:26%; animation-delay: 0.7s;}
+.rectangle_data .vertical_graphic .graphic .line11{top:28%; animation-delay: 0.1s;}
+.rectangle_data .vertical_graphic .graphic .line12{top:30%; animation-delay: 0.8s;}
+.rectangle_data .vertical_graphic .graphic .line13{top:32%; animation-delay: 0.6s;}
+.rectangle_data .vertical_graphic .graphic .line14{top:34%; animation-delay: 0.2s;}
+.rectangle_data .vertical_graphic .graphic .line15{top:36%; animation-delay: 1s;}
+.rectangle_data .vertical_graphic .graphic .line16{top:38%; animation-delay: 0.7s;}
+.rectangle_data .vertical_graphic .graphic .line17{top:40%; animation-delay: 0.4s;}
+.rectangle_data .vertical_graphic .graphic .line18{top:42%; animation-delay: 0.1s;}
+.rectangle_data .vertical_graphic .graphic .line19{top:44%; animation-delay: 0.9s;}
+.rectangle_data .vertical_graphic .graphic .line20{top:46%; animation-delay: 0.8s;}
+.rectangle_data .vertical_graphic .graphic .line21{top:48%; animation-delay: 0.7s;}
+.rectangle_data .vertical_graphic .graphic .line22{top:50%; animation-delay: 0.2s;}
+.rectangle_data .vertical_graphic .graphic .line23{top:52%; animation-delay: 0.3s;}
+.rectangle_data .vertical_graphic .graphic .line24{top:54%; animation-delay: 0.1s;}
+.rectangle_data .vertical_graphic .graphic .line25{top:56%; animation-delay: 0.8s;}
+.rectangle_data .vertical_graphic .graphic .line26{top:58%; animation-delay: 0.5s;}
+.rectangle_data .vertical_graphic .graphic .line27{top:60%; animation-delay: 0.7s;}
+.rectangle_data .vertical_graphic .graphic .line28{top:62%; animation-delay: 0.1s;}
+.rectangle_data .vertical_graphic .graphic .line29{top:64%; animation-delay: 0.2s;}
+.rectangle_data .vertical_graphic .graphic .line30{top:66%; animation-delay: 0.3s;}
+.rectangle_data .vertical_graphic .graphic .line31{top:68%; animation-delay: 1s;}
+.rectangle_data .vertical_graphic .graphic .line32{top:70%; animation-delay: 0.4s;}
+.rectangle_data .vertical_graphic .graphic .line33{top:72%; animation-delay: 0.7s;}
+.rectangle_data .vertical_graphic .graphic .line34{top:74%; animation-delay: 0.2s;}
+.rectangle_data .vertical_graphic .graphic .line35{top:76%; animation-delay: 0.9s;}
+.rectangle_data .vertical_graphic .graphic .line36{top:78%; animation-delay: 0.1s;}
+.rectangle_data .vertical_graphic .graphic .line37{top:80%; animation-delay: 1s;}
+.rectangle_data .vertical_graphic .graphic .line38{top:82%; animation-delay: 0.3s;}
+.rectangle_data .vertical_graphic .graphic .line39{top:84%; animation-delay: 0.2s;}
+.rectangle_data .vertical_graphic .graphic .line40{top:86%; animation-delay: 0.7s;}
+.rectangle_data .vertical_graphic .graphic .line41{top:88%; animation-delay: 0.5s;}
+.rectangle_data .vertical_graphic .graphic .line42{top:90%; animation-delay: 0.1s;}
+.rectangle_data .vertical_graphic .graphic .line43{top:92%; animation-delay: 0.9s;}
+
+
+@keyframes graphic{
+    0%  {transform:scaleX(1);}
+    100%{transform:scaleX(2);}
+}
+
+.rectangle_data .vertical_graphic .data{
+    position: absolute;
+    left: 57%;
+    width: 43%;
+    height: 100%;
+    border-top: solid #fff 1px;
+    border-bottom: solid #fff 1px;
+}
+
+.rectangle_data .vertical_graphic .data span{
+    position: absolute;
+    left:10%;
+    color: #fff;
+    font-family: 'Contrail One', cursive;
+    font-size: 120%;
+}
+
+.rectangle_data .vertical_graphic .data .span1{top:2%; opacity: 0.8;}
+.rectangle_data .vertical_graphic .data .span2{top:15%; opacity: 0.3;}
+.rectangle_data .vertical_graphic .data .span3{top:30%; opacity: 0.5;}
+.rectangle_data .vertical_graphic .data .span4{top:45%; opacity: 0.8;}
+.rectangle_data .vertical_graphic .data .span5{top:60%; opacity: 0.3;}
+.rectangle_data .vertical_graphic .data .span6{top:75%; opacity: 0.8;}
+.rectangle_data .vertical_graphic .data .span7{top:90%; opacity: 0.3;}
+
+
+/*************
+
+Main sphere
+
+*************/
+
+.main_sphere{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    top:0%;
+    left: 0%;
+    background-image: url("images/star.jpg");
+    overflow: hidden;
+    z-index: -1;
+}
+
+.main_sphere .planet{
+    border-radius: 50%;
+    position: absolute;
+    width: 115px;
+    height: 115px;
+    background: red;
+}
+
+.main_sphere .planet1{ 
+    top: 60%;
+    left:20%;
+    width: 260px;
+    height: 260px;
+    box-shadow:
+    inset 0 0 50px #fff,      
+    inset 20px 0 80px rgb(196, 161, 6),   
+    inset -20px 0 80px rgb(180, 74, 3),  
+    inset 20px 0 300px rgb(196, 161, 6),   
+    inset -20px 0 300px rgb(180, 74, 3), 
+    0 0 50px #fff,            
+    -10px 0 80px rgb(196, 161, 6),            
+    10px 0 80px rgb(180, 74, 3);        
+}
+
+.main_sphere .planet2{
+    top: 50%;
+    left:55%;
+    width: 130px;
+    height: 130px;
+    box-shadow:
+    inset 0 0 50px #fff,      
+    inset 20px 0 80px rgb(56, 145, 85),   
+    inset -20px 0 80px rgb(15, 255, 235),  
+    inset 20px 0 300px rgb(56, 145, 85),   
+    inset -20px 0 300px rgb(15, 255, 235), 
+    0 0 50px #fff,            
+    -10px 0 80px rgb(56, 145, 85),            
+    10px 0 80px rgb(15, 255, 235);        
+}
+.main_sphere .planet3{
+    top: 35%;
+    left:40%;
+    width: 70px;
+    height: 70px;
+    box-shadow:
+    inset 0 0 50px #fff,      
+    inset 20px 0 80px rgb(64, 8, 155),   
+    inset -20px 0 80px rgb(5, 77, 231),  
+    inset 20px 0 300px rgb(64, 8, 155),   
+    inset -20px 0 300px rgb(5, 77, 231), 
+    0 0 50px #fff,            
+    -10px 0 80px rgb(64, 8, 155),            
+    10px 0 80px rgb(5, 77, 231);        
+}
+.main_sphere .planet4{
+    top: 27%;
+    left:70%;
+    width: 40px;
+    height: 40px;
+    box-shadow:
+    inset 0 0 50px #fff,      
+    inset 20px 0 80px #f0f,   
+    inset -20px 0 80px #0ff,  
+    inset 20px 0 300px #f0f,   
+    inset -20px 0 300px #0ff, 
+    0 0 50px #fff,            
+    -10px 0 80px #f0f,            
+    10px 0 80px #0ff;        
+}
+.main_sphere .planet5{
+    top: 60%;
+    left:70%;
+    width: 700px;
+    height: 700px;
+    box-shadow:
+    inset 0 0 50px #fff,      
+    inset 20px 0 80px #f0f,   
+    inset -20px 0 80px #0ff,  
+    inset 20px 0 300px #f0f,   
+    inset -20px 0 300px #0ff, 
+    0 0 50px #fff,            
+    -10px 0 80px #f0f,            
+    10px 0 80px #0ff;        
+}
+
+
+/*************
+
+Logo
+
+*************/
+
+
+.circles{
+    position: absolute;
+    left: 95%;
+    top: 3%;
+    border-radius: 50%;
+    width: 3%;
+    height: 8%; 
+}
+
+.circles .circle{
+    position: absolute;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    animation-name: planet;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.circles .circle1{animation-delay: 0s;}
+.circles .circle2{animation-delay: 0.2s;}
+.circles .circle3{animation-delay: 0.4s;}
+.circles .circle4{animation-delay: 0.6s;}
+.circles .circle5{animation-delay: 0.8s;}
+.circles .circle6{animation-delay: 1s;}
+.circles .circle7{animation-delay: 1.2s;}
+.circles .circle8{animation-delay: 1.4s;}
+.circles .circle9{animation-delay: 1.6s;}
+.circles .circle10{animation-delay: 1.8s;}
+
+
+img.nasa_logo{
+    position: absolute;
+    left: 20%;
+    top: 28%;
+    width: 80%;
+    height: 50%;
+}
+
+.circles .close_menu{
+    position: absolute;
+    left: 28%;
+    top: 28%;
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 50%;
+    height: 40%;
+    display: none;
+}
+
+.circles .close_menu.open{
+    display: block;
+    animation-name: cross;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    transform: translateY(0%);
+}
+
+@keyframes cross{
+    0%  {transform: translateY(0%);}
+    100%{transform: translateY(200%);}
+}
+
+.circles .close_menu .bar1_cross{
+    position: absolute;
+    top: 50%;
+    height: 2%;
+    width: 100%;
+    background: white;
+    transform: rotate(45.5deg);
+}
+
+.circles .close_menu .bar2_cross{
+    position: absolute;
+    top: 50%;
+    height: 2%;
+    width: 100%;
+    background: white;
+    transform: rotate(130.5deg);
+}
+
+/*************
+
+Welcome text
+
+*************/
+
+span.welcome{
+    position: absolute;
+    top:6%;
+    left: 82%;
+    width: 8%;
+    overflow: hidden;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/*************
+
+Vocal button
+
+*************/
+
+
+.vocal_button{
+    position: absolute;
+    left: 87%;
+    top: 78%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    height: 140px;
+}
+
+.vocal_button .first_circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: #4690E9 2px solid;
+    width: 100px;
+    height: 100px;
+    animation-name: circle1;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes circle1{
+    0%  {transform: rotateX(0deg) rotateY(0deg)}
+    100%{transform: rotateX(360deg) rotateY(360deg)}
+}
+
+.vocal_button .second_circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: #545AA3 2px solid;
+    width: 70px;
+    height: 70px;
+    animation-name: circle2;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes circle2{
+    0%  {transform: rotateY(0deg) rotateX(0deg)}
+    100%{transform: rotateY(-360deg) rotateX(360deg)}
+}
+
+.vocal_button .third_circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: #B44888 2px solid;
+    width: 40px;
+    height: 40px;
+    animation-name: circle3;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes circle3{
+    0%  {transform: rotateY(0deg) rotateX(0deg)}
+    100%{transform: rotateY(-360deg) rotateX(360deg)}
+}
+
+.vocal_button .vocal_effect{
+    position: absolute;
+}
+
+.vocal_button .vocal_effect .equalizer{
+    width: 30px;
+    height: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.vocal_button .vocal_effect .equalizer .bar{
+    animation-name: vocal_animation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    will-change: transform;
+    width: 1px;
+    height: 10px;
+    box-shadow:
+    inset 0 0 50px #fff,    
+    0 0 50px #fff;           
+}
+
+.equalizer .bar-1{ height: 5px; animation-delay: 0.1s;}
+.equalizer .bar-2{ height: 9px; animation-delay: 0.3s;}
+.equalizer .bar-3{ height: 13px; animation-delay: 0.5s;}
+.equalizer .bar-4{ height: 17px; animation-delay: 0.7s;}
+.equalizer .bar-5{ height: 20px; animation-delay: 0.9s;}
+.equalizer .bar-6{ height: 25px; animation-delay: 1s;}
+.equalizer .bar-7{ height: 20px; animation-delay: 0.9s;}
+.equalizer .bar-8{ height: 17px; animation-delay: 0.7s;}
+.equalizer .bar-9{ height: 13px; animation-delay: 0.5s;}
+.equalizer .bar-10{height: 9px; animation-delay: 0.3s;}
+.equalizer .bar-11{height: 5px; animation-delay: 0.1s;}
+
+
+@keyframes vocal_animation{
+    0%   {transform: rotateX(0deg);} 
+    100% {transform: rotateX(180deg);}
+}
+
+/*************
+
+Rectangle target
+
+*************/
+
+.rectangle_target{
+    display: none;
+    background: rgba(0, 0, 0, 0.63);
+    border: rgb(73, 74, 85) solid 1px;
+    border-radius: 5%;
+    height: 35%;
+    width: 20%;
+    position: absolute;
+    top: 35%;
+    left: 76%;
+    transform: translateX(150%);
+    will-change: transform;
+}
+
+.rectangle_target.open{
+    animation-name: open4;
+    animation-duration: 1s;
+    display: block;
+    transform: translateX(0%);
+}
+
+@keyframes open4{
+    0%  {transform: translateX(150%)}
+    100%{transform: translateX(0%);}
+}
+
+.rectangle_target span.planet_name{
+    position: absolute;
+    top: -5%;
+    left: 1.5%;
+    font-family: 'Codystar', cursive;
+    color: white;
+    font-size: 150%;
+    font-weight: bolder;
+}
+
+.rectangle_target .circles{
+    position: absolute;
+    left: 22%;
+    top: 14%;
+    border: 0px dashed rgb(79, 173, 25);
+    border-radius: 50%;
+    height: 160px;
+    width: 160px;
+    animation-name: planet_animation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes planet_animation{
+    0%  {transform:  rotateY(0deg);}
+    50% {transform: rotateY(550deg);}
+    100%{transform:  rotateY(180deg);}
+}
+
+
+
+.rectangle_target .circle{
+    position: absolute;
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    animation-name: planet;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    opacity: 0.6;
+}
+
+.rectangle_target .circle_horizontal{
+    animation-name: planet2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    opacity: 0.6;
+    width: 120px;
+    height: 120px;
+    top: -10%;
+    left: -10%;
+}
+
+.rectangle_target .circles.planet1_change{
+    border: 5px solid rgb(196, 161, 6);
+    background: radial-gradient(circle at 100px 100px, rgb(196, 161, 6), rgb(180, 74, 3));
+}
+
+.rectangle_target .circle1{animation-delay: 0.05s;}
+.rectangle_target .circle2{animation-delay: 0.1s;}
+.rectangle_target .circle3{animation-delay: 0.15s;}
+.rectangle_target .circle4{animation-delay: 0.2s;}
+.rectangle_target .circle5{animation-delay: 0.25s;}
+.rectangle_target .circle6{animation-delay: 0.3s;}
+.rectangle_target .circle7{animation-delay: 0.35s;}
+.rectangle_target .circle8{animation-delay: 0.4s;}
+.rectangle_target .circle9{animation-delay: 0.45s;}
+.rectangle_target .circle10{animation-delay: 0.5s;}
+.rectangle_target .circle11{animation-delay: 0.55s;}
+.rectangle_target .circle12{animation-delay: 0.6s;}
+.rectangle_target .circle13{animation-delay: 0.65s;}
+.rectangle_target .circle14{animation-delay: 0.7s;}
+.rectangle_target .circle15{animation-delay: 0.75s;}
+.rectangle_target .circle16{animation-delay: 0.8s;}
+.rectangle_target .circle17{animation-delay: 0.85s;}
+.rectangle_target .circle18{animation-delay: 0.9s;}
+.rectangle_target .circle19{animation-delay: 0.95s;}
+.rectangle_target .circle20{animation-delay: 1s;}
+.rectangle_target .circle21{animation-delay: 1.05s;}
+.rectangle_target .circle22{animation-delay: 1.1s;}
+.rectangle_target .circle23{animation-delay: 1.15s;}
+.rectangle_target .circle24{animation-delay: 1.2s;}
+.rectangle_target .circle25{animation-delay: 1.25s;}
+.rectangle_target .circle26{animation-delay: 1.3s;}
+.rectangle_target .circle27{animation-delay: 1.35s;}
+.rectangle_target .circle28{animation-delay: 1.4s;}
+.rectangle_target .circle29{animation-delay: 1.45s;}
+.rectangle_target .circle30{animation-delay: 1.5s;}
+.rectangle_target .circle31{animation-delay: 1.55s;}
+.rectangle_target .circle32{animation-delay: 1.6s;}
+.rectangle_target .circle33{animation-delay: 1.65s;}
+.rectangle_target .circle34{animation-delay: 1.7s;}
+.rectangle_target .circle35{animation-delay: 1.75s;}
+.rectangle_target .circle36{animation-delay: 1.55s;}
+.rectangle_target .circle37{animation-delay: 1.6s;}
+.rectangle_target .circle38{animation-delay: 1.65s;}
+.rectangle_target .circle39{animation-delay: 1.7s;}
+.rectangle_target .circle40{animation-delay: 1.75s;}
+.rectangle_target .circle41{animation-delay: 1.8s;}
+.rectangle_target .circle42{animation-delay: 1.85s;}
+.rectangle_target .circle43{animation-delay: 1.9s;}
+.rectangle_target .circle44{animation-delay: 1.95s;}
+.rectangle_target .circle45{animation-delay: 2s;}
+.rectangle_target .circle46{animation-delay: 2.05s;}
+.rectangle_target .circle47{animation-delay: 2.1s;}
+.rectangle_target .circle48{animation-delay: 2.15s;}
+.rectangle_target .circle49{animation-delay: 2.2s;}
+.rectangle_target .circle50{animation-delay: 2.25s;}
+
+
+@keyframes planet{
+    0%  {transform: rotateY(0deg);}
+    100%{transform: rotateY(180deg);}
+}
+
+@keyframes planet2{
+    0%  {transform: rotateX(0deg);}
+    100%{transform: rotateX(180deg);}
+}
+
+/******* 
+
+Compass 
+
+*******/
+
+
+.rectangle_target .compass{
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    width: 23%;
+    height: 22%;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.rectangle_target .compass .line{
+    position: absolute;
+    width: 10%;
+    height: 4%;
+    border-radius: 0.5em;
+    background: white;
+}
+
+.rectangle_target .compass .line1{transform: rotate(45deg); top: 12%; left: 12%;}
+.rectangle_target .compass .line2{transform: rotate(-50deg); top: 10%; left: 75%;}
+.rectangle_target .compass .line3{transform: rotate(135deg); top: 80%; left: 10%;}
+.rectangle_target .compass .line4{transform: rotate(230deg); top: 85%; left: 75%;}
+
+
+.rectangle_target .compass span{
+    position: absolute;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 60%;
+}
+
+.rectangle_target .compass span.north{left: 43%;}
+.rectangle_target .compass span.east{top: 40%; left: 85%;}
+.rectangle_target .compass span.south{top: 85%; left: 43%;}
+.rectangle_target .compass span.west{top: 40%;left: 2%;}
+
+.rectangle_target .compass .cursor{
+    position: absolute;
+    top: 42%;
+    left: 40%;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 15px solid rgb(255, 255, 255);
+    animation-name: compass;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    will-change: transform;
+}
+
+@keyframes compass{
+    0%  {transform: rotate(0deg);}
+    10% {transform: rotate(-20deg);}
+    20% {transform: rotate(-80deg);}
+    30% {transform: rotate(-50deg);}
+    40% {transform: rotate(-70deg);}
+    50% {transform: rotate(-30deg);}
+    60% {transform: rotate(-120deg);}
+    70% {transform: rotate(-180deg);}
+    80% {transform: rotate(-150deg);}
+    90% {transform: rotate(-170deg);}
+    100%{transform: rotate(-130deg);}
+}
+
+/*************
+
+Rectangle Target composition
+
+*************/
+
+.rectangle_target span.composition{
+    position: absolute;
+    top: 70%;
+    left: 53%;
+    font-size: 120%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #fff;
+}
+
+.rectangle_target span.gaz{
+    position: absolute;
+    top: 90%;
+    left: 52%;
+    font-size: 120%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #fff;
+    background: rgba(148, 47, 47, 0.445);
+    border: 1px solid rgb(255, 216, 216);
+    border-radius: 0.5em;
+    width: 36%;
+    height: 7%;
+    text-align: center;
+    opacity: 0.3;
+}
+
+.rectangle_target span.solid{
+    position: absolute;
+    top: 80%;
+    left: 52%;
+    font-size: 120%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #fff;
+    background: rgba(77, 114, 8, 0.521);
+    border-radius: 0.5em;
+    border: 1px solid rgb(173, 204, 173);
+    width: 36%;
+    height: 7%;
+    text-align: center;
+    opacity: 0.3;
+}
+
+.rectangle_target span.active{
+    opacity: 1;
+}
+
+
+/*************
+
+"Click on a planet message"
+
+*************/
+
+span.message{
+    position: absolute;
+    top: 93%;
+    left: 43%;
+    font-size: 200%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #fff;
+    animation-name: message;
+    animation-duration: 30s;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    will-change: opacity;
+}
+
+@keyframes message{
+    0%  {opacity: 1;}
+    5% {opacity: 0;}
+    10% {opacity: 1;}
+    15% {opacity: 0;}
+    20% {opacity: 1;}
+    25% {opacity: 0;}
+    30% {opacity: 1;}
+    35% {opacity: 0;}
+    40% {opacity: 1;}
+    45% {opacity: 0;}
+    50%{opacity: 1;}
+    55% {opacity: 0;}
+    60% {opacity: 1;}
+    65% {opacity: 0;}
+    70% {opacity: 1;}
+    75% {opacity: 0;}
+    80% {opacity: 1;}
+    85% {opacity: 0;}
+    90% {opacity: 1;}
+    95% {opacity: 0;}
+    100%{opacity: 0;}
+}
