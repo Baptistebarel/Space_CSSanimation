@@ -1,14 +1,14 @@
 # Space pilote simulation 
-# Baptiste Barel
+## Baptiste Barel
 
-### CSS Features :
+# CSS Features :
 
-# First page :
+### First page :
 
 * Animated rocket in css
 * Apparition of the planets and the line is animated in css
 
-# Main page :
+### Main page :
 
 * Animated logo
 * Animated voice control icon
@@ -17,7 +17,7 @@
 * Rectangle data : animated radar and some options 
 * Rectangle target : animated planet shape and compass
 
-### Javascript Features :
+# Javascript Features :
 
 * At the click of the first button the name in the input will be put near the logo and the main page will appear.
 * At the click on one of the 5 planets :
@@ -28,7 +28,7 @@
     - A cross will appear below the logo to close the interface
 * The background stars will follow the mouse 
 
-### Canvas Features :
+# Canvas Features :
 
 * I use canvas to make the 3 arc in the rectangle flight
 
